@@ -8,3 +8,4 @@
 7-movethatfile - moves file named betty from directory /tmp/ to /tmp/my_first_directory.
 8-firstdelete - Deletes the file named betty.
 9-firstdirdeletion - Deletes the directory my_first_directory in /tmp/ directory.
+10-back - Changes the working directory to the previous one.

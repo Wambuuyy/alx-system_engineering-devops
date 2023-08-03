@@ -9,3 +9,4 @@
 8-jamesbond - Sets the permissions that owner and groups has no permission and other users have all permissions.
 9-Johndoe - Sets the mode of hello file as -rwxr-x-wx
 10-mirror permissions - Sets the helo file's mode the same as file named olleh.
+11-directories permissions - Adds execute permissions to all subdirectories of the current directory for the owner, the group, and all the users.

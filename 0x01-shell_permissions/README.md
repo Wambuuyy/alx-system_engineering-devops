@@ -10,3 +10,4 @@
 9-Johndoe - Sets the mode of hello file as -rwxr-x-wx
 10-mirror permissions - Sets the helo file's mode the same as file named olleh.
 11-directories permissions - Adds execute permissions to all subdirectories of the current directory for the owner, the group, and all the users.
+12-directory permissions - Creates a directory my_dir with permissions 751 in the working directory.

@@ -12,3 +12,4 @@
 11-directories permissions - Adds execute permissions to all subdirectories of the current directory for the owner, the group, and all the users.
 12-directory permissions - Creates a directory my dir with permissions 751 in the working directory.
 13-change group - Changes the group owner to school for the file hello.
+100-change owner and group - Changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.

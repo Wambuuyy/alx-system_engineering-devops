@@ -13,4 +13,5 @@
 12-directory permissions - Creates a directory my dir with permissions 751 in the working directory.
 13-change group - Changes the group owner to school for the file hello.
 100-change owner and group - Changes the owner to vincent and the group owner to staff for all the files and directories in the working directory.
-101-symbolic link permissions - Changes the owner and the group owner of _hello to vincent and staff respectively.
+101-symbolic link permissions - Changes the owner and the group owner of hello to vincent and staff respectively.
+102-if only - Changes the owner of the file hello to betty only if it is owned by the user guillaume.

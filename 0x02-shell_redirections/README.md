@@ -20,4 +20,6 @@
 19-AZ - Replaces all characters A  and C from input to Z and e respectively.
 20-hiago - Removes all letters c and C from input. 
 21-reverse - reverses its input.
-22-users_and_homes - Displays all users and their home directories, sorted by users. based on the /etc/passwd file.  
+22-users_and_homes - Displays all users and their home directories, sorted by users. based on the /etc/passwd file.
+100-empty_casks - finds all empty files and directories in the current directory and all sub-directories. Only the names of the files and directories should be displayed (not the entire path)
+Hidden files should be listed. One file name per line. The listing should end with a new line. You are not allowed to use basename, grep, egrep, fgrep or rgrep

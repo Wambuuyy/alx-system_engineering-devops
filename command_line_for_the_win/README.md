@@ -57,7 +57,7 @@ Complete the next 9 tasks, reaching a total of 18.
 Repo:
 - GitHub repository: [alx-system_engineering-devops](link-to-repo)
 - Directory: `command_line_for_the_win`
-- File: [1-next_9_tasks.jpg](link-to-file), [1-next_9_tasks.png](link-to-file)
+- File: [1-next_9_tasks.png](1-next_9_tasks.png)
 
 ### 2. Reach the Perfect Cube, 27 (Advanced)
 
@@ -66,4 +66,4 @@ Complete the next 9 tasks, reaching a total of 27.
 Repo:
 - GitHub repository: [alx-system_engineering-devops](link-to-repo)
 - Directory: `command_line_for_the_win`
-- File: [2-next_9_tasks.jpg](link-to-file), [2-next_9_tasks.png](link-to-file)
+- File: [2-next_9_tasks.png](2-next_9_tasks.png)

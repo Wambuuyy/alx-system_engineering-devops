@@ -46,7 +46,7 @@ Make sure to include the steps you followed to use the SFTP command-line tool in
 Complete the first 9 tasks.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](link-to-repo)
+- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [0-first_9_tasks.png](0-first_9_tasks.png)
 
@@ -55,7 +55,7 @@ Repo:
 Complete the next 9 tasks, reaching a total of 18.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](link-to-repo)
+- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [1-next_9_tasks.png](1-next_9_tasks.png)
 
@@ -64,6 +64,6 @@ Repo:
 Complete the next 9 tasks, reaching a total of 27.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](link-to-repo)
+- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [2-next_9_tasks.png](2-next_9_tasks.png)

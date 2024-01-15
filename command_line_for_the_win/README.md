@@ -48,7 +48,7 @@ Complete the first 9 tasks.
 Repo:
 - GitHub repository: [alx-system_engineering-devops](link-to-repo)
 - Directory: `command_line_for_the_win`
-- File: [0-first_9_tasks.jpg](link-to-file), [0-first_9_tasks.png](link-to-file)
+- File: [0-first_9_tasks.png](0-first_9_tasks.png)
 
 ### 1. Reach חי Completed Tasks (Advanced)
 

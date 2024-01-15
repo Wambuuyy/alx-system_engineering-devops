@@ -1,6 +1,6 @@
 # CMD CHALLENGE
 
-![First 9 Tasks](command_line_for_the_win/0-first_9_tasks.png)
+![First 9 Tasks](0-first_9_tasks.png)
 
 ## Background Context
 

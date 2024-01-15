@@ -22,8 +22,8 @@ CMD CHALLENGE is an engaging game designed to test and improve your Bash skills.
 In addition to completing the project tasks and submitting the required screenshots to GitHub, you are also required to demonstrate the use of the SFTP (Secure File Transfer Protocol) command-line tool to move your local screenshots to the sandbox environment.
 
 **References:**
-- [SFTP Guide](link-to-sftp-guide)
-- [SFTP File Transfer Tutorial](link-to-sftp-tutorial)
+- [SFTP Guide](https://man.openbsd.org/sftp)
+- [SFTP File Transfer Tutorial](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
 
 ## SFTP File Transfer Instructions
 
@@ -46,7 +46,7 @@ Make sure to include the steps you followed to use the SFTP command-line tool in
 Complete the first 9 tasks.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
+- GitHub repository: [alx-system_engineering-devops](https://github.com/Wambuuyy/alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [0-first_9_tasks.png](0-first_9_tasks.png)
 
@@ -55,7 +55,7 @@ Repo:
 Complete the next 9 tasks, reaching a total of 18.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
+- GitHub repository: [alx-system_engineering-devops](https://github.com/Wambuuyy/alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [1-next_9_tasks.png](1-next_9_tasks.png)
 
@@ -64,6 +64,6 @@ Repo:
 Complete the next 9 tasks, reaching a total of 27.
 
 Repo:
-- GitHub repository: [alx-system_engineering-devops](alx-system_engineering-devops)
+- GitHub repository: [alx-system_engineering-devops](https://github.com/Wambuuyy/alx-system_engineering-devops)
 - Directory: `command_line_for_the_win`
 - File: [2-next_9_tasks.png](2-next_9_tasks.png)

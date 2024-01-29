@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 # display information about users from /etc/passwd
 
-while IFS=':' read -r username x uid gid info home shell; do
-	passcode=$(awk -F: -v search="$username" '$1 == search {print $2}' /etc/shadow)
-	id_info=$(awk -F: -v search="$username" '$1 == search {print $5}' /etc/passwd)
+temp_file=$(mktemp)
+while IFS=':' read -r username _ uid gid info home shell; do
+	passcode=$(grep "^$username:" /etc/shadow | cut -d: -f2)
+	id_info="$info"
 
 	echo "The user $username is part of the $gid gang, lives in $home and rides $shell. $uid's place is protected by the passcode $passcode, more info about the user here: $id_info"
-done < /etc/passwd
+done < /etc/passwd > "$temp_file"
+
+# Read from the temporary file
+cat "$temp_file"
+
+# Remove the temporary file
+rm "$temp_file"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # display information about users from /etc/passwd
 
 while IFS=':' read -r username x uid gid info home shell; do

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # Script to group visitors by IP and HTTP status code, and display the data
 
 # Using awk to create an associative array where keys are combinations of IP and HTTP status code, and values are the count of occurrences

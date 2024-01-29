@@ -1,4 +1,5 @@
 #!/bin/bash
+# display information about users from /etc/passwd
 
 while IFS=':' read -r username x uid gid info home shell; do
 	passcode=$(awk -F: -v search="$username" '$1 == search {print $2}' /etc/shadow)

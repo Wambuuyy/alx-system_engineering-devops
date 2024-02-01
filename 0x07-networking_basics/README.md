@@ -112,8 +112,8 @@ cat foo_answer_file
    - Randomly
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 0-OSI_model](https://github.com/alx-system_engineering-devops/0x07-networking_basics/0-OSI_model)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 0-OSI_model](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics/0-OSI_model)
 
 #### 1. Types of network
 - LAN connects local devices, WAN connects LANs, and WANs operate over the Internet.
@@ -135,8 +135,8 @@ cat foo_answer_file
    - LAN
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 1-types_of_network](https://github.com/alx-system_engineering-devops/0x07-networking_basics/1-types_of_network)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 1-types_of_network](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics/1-types_of_network)
 
 #### 2. MAC and IP address
 **Questions:**
@@ -151,8 +151,8 @@ cat foo_answer_file
    - A number that network devices use to connect to networks
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 2-MAC_and_IP_address](https://github.com/alx-system_engineering-devops/0x07-networking_basics/2-MAC_and_IP_address)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 2-MAC_and_IP_address](https://github.com/Wambuuyy/alx-system_engineering-devops/tree/master/0x07-networking_basics/2-MAC_and_IP_address)
 
 #### 3. UDP and TCP
 **Questions:**
@@ -171,8 +171,8 @@ cat foo_answer_file
    - May I increase the rate at which I am sending you boxes?
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 3-UDP_and_TCP](https://github.com/alx-system_engineering-devops/0x07-networking_basics/3-UDP_and_TCP)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 3-UDP_and_TCP](https://github.com/Wambuuyy/alx-system_engineering-devops/tree/master/0x07-networking_basics/3-UDP_and_TCP)
 
 #### 4. TCP and UDP ports
 - Write a Bash script that displays listening ports.
@@ -192,8 +192,8 @@ udp6       0      0 [::]:sunrpc             [::]:*                              
 ```
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 4-TCP_and_UDP_ports](https://github.com/alx-system_engineering-devops/0x07-networking_basics/4-TCP_and_UDP_ports)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 4-TCP_and_UDP_ports](https://github.com/Wambuuyy/alx-system_engineering-devops/tree/master/0x07-networking_basics/4-TCP_and_UDP_ports)
 
 #### 5. Is the host on the network
 - Write a Bash script that pings an IP address passed as an argument.
@@ -219,5 +219,5 @@ Usage: 5-is_the_host_on_the_network {IP_ADDRESS}
 ```
 
 **Repo:**
-- [GitHub repository](https://github.com/alx-system_engineering-devops/0x07-networking_basics)
-- [File: 5-is_the_host_on_the_network](https://github.com/alx-system_engineering-devops/0x07-networking_basics/5-is_the_host_on_the_network)
+- [GitHub repository](https://github.com/Wambuuyy/alx-system_engineering-devops/blob/master/0x07-networking_basics)
+- [File: 5-is_the_host_on_the_network](https://github.com/Wambuuyy/alx-system_engineering-devops/tree/master/0x07-networking_basics/5-is_the_host_on_the_network)

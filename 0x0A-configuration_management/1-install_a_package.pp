@@ -3,6 +3,6 @@
 # Ensure Flask is installed via pip3
 package { 'Flask':
   ensure   => '2.1.0',  # Version requirement
-  provider => 'pip3',   # Use pip3 provider
+  provider => 'gem'  # Use gem provider for Python packages
 }
 

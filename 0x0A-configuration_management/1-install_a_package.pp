@@ -1,6 +1,8 @@
-# puppet manifest to install a package
-# Install an especific version of flask (2.1.0)
-package {'flask':
-  ensure   => '2.1.0',
-  provider => 'pip3',
+# Puppet Manifest for Task 2: Install a package
+
+# Ensure Flask is installed via pip3
+package { 'Flask':
+  ensure   => '2.1.0',  # Version requirement
+  provider => 'pip3',   # Use pip3 provider
 }
+

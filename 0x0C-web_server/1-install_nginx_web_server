@@ -1,7 +1,32 @@
 #!/usr/bin/env bash
-# Install and setup nginx into the server
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
+
+# Update package repositories and upgrade installed packages
+sudo apt-get update
+sudo apt-get upgrade -y
+
+# Install Nginx
+sudo apt-get install nginx -y
+
+# Start Nginx service
 sudo service nginx start
+
+# Verify Nginx is running
+nginx_status=$(sudo service nginx status)
+if [[ $nginx_status == *"active (running)"* ]]; then
+	echo "Nginx is running."
+else
+	echo "Nginx failed to start."
+	exit 1
+fi
+
+# Create index.html with "Hello World!" message
 echo 'Hello World!' | sudo tee /var/www/html/index.html
+
+# Verify Nginx is listening on port 80
+netstat_output=$(sudo netstat -tuln)
+if [[ $netstat_output == *"LISTEN"* && $netstat_output == *":80"* ]]; then
+	echo "Nginx is listening on port 80."
+else
+	echo "Nginx is not listening on port 80."
+	exit 1
+fi

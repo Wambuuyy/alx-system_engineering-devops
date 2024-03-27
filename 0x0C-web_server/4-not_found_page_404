@@ -1,12 +1,30 @@
 #!/usr/bin/env bash
-# Configure a new Nginx server so that /redirect_me is redirecting to another page.
+# redirects to the said path permanently
 
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y install nginx
-sudo service nginx start
-echo "Ceci n'est pas une page" | sudo tee /var/www/html/404.html
-new_string="\\\terror_page 404 /404.html;\n\tlocation = /404.html {\n\t\troot /var/www/html;\n\t\tinternal;\n\t}"
-sudo sed -i "20i $new_string" /etc/nginx/sites-available/default
+sudo apt-get update -y
+
+sudo apt-get install -y nginx
+
+# content to be loaded by root request
+echo "Hello World!" |sudo tee /var/www/html/index.html > /dev/null
+
+sudo tee /etc/nginx/sites-available/default >/dev/null <<EOF
+server {
+        listen 80;
+        listen [::]:80 default_server;
+        server_name _;
+
+        location /redirect_me {
+                return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;
+        }
+        location @404 {
+                 return 404 "Ceci n'est pas une page.";
+        }
+
+
+        root /var/www/html;
+        error_page 404 = @404;
+}
+EOF
+
 sudo service nginx restart
-sudo service nginx reload

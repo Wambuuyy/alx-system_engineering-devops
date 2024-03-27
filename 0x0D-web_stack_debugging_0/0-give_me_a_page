@@ -1,18 +1,20 @@
-#!/usr/bin/env bash
+# Get the ID of the running container
+docker ps
 
-# Update package repositories
-sudo apt-get -y update
+# Connect to the running container using its ID
+docker exec -it CONTAINER_ID /bin/bash
 
-# Install Apache2
-sudo apt-get -y install apache2
+# Check Apache status (optional)
+service apache2 status
 
-# Check if Apache2 service is running
-if ! (sudo service apache2 status | grep -q "apache2 is running"); then
-    echo "Apache2 is not running. Starting Apache2..."
-    sudo service apache2 start
-else
-    echo "Apache2 is already running."
-fi
+# Navigate to the directory where Apache serves files (usually /var/www/html/)
+cd /var/www/html/
 
-# Restart Apache2 service
-sudo service apache2 restart
+# Create or edit the index.html file to contain "Hello Holberton"
+echo "Hello Holberton" > index.html
+
+# Exit the container shell
+exit
+
+# Test the Apache server by curling the mapped port
+curl 0:8080

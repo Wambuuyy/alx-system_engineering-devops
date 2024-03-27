@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
+# Update package repositories
 sudo apt-get -y update
 
+# Install Apache2
 sudo apt-get -y install apache2
 
-service apache2 restart
+# Check if Apache2 service is running
+if ! (sudo service apache2 status | grep -q "apache2 is running"); then
+    echo "Apache2 is not running. Starting Apache2..."
+    sudo service apache2 start
+else
+    echo "Apache2 is already running."
+fi
+
+# Restart Apache2 service
+sudo service apache2 restart

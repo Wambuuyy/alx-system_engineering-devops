@@ -9,7 +9,7 @@ apt-get install -y apache2
 service apache2 start
 
 # Check if Apache is running
-if pgrep apache2 >/dev/null 2>&1; then
+if ps aux | grep apache2 | grep -v grep >/dev/null; then
     echo "apache2 is running"
 else
     echo "apache2 is not running"

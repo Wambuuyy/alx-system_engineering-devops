@@ -1,20 +1,12 @@
-# Get the ID of the running container
-docker ps
+#!/usr/bin/env bash
+# Start Apache and configure it to serve a page containing "Hello Holberton"
 
-# Connect to the running container using its ID
-docker exec -it CONTAINER_ID /bin/bash
+# Install Apache if not already installed
+apt-get update
+apt-get install -y apache2
 
-# Check Apache status (optional)
-service apache2 status
+# Start Apache service
+service apache2 start
 
-# Navigate to the directory where Apache serves files (usually /var/www/html/)
-cd /var/www/html/
-
-# Create or edit the index.html file to contain "Hello Holberton"
-echo "Hello Holberton" > index.html
-
-# Exit the container shell
-exit
-
-# Test the Apache server by curling the mapped port
-curl 0:8080
+# Create a simple HTML file with "Hello Holberton" content
+echo "Hello Holberton" > /var/www/html/index.html

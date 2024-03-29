@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-
 # Parse Apache log file, count occurrences of each combination of IP and HTTP status code, and sort the data
+
 awk '{count[$1" "$9]++} END {for (ip_status in count) print count[ip_status], ip_status}' apache-access.log | sort -nr

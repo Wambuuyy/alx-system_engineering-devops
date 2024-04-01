@@ -5,7 +5,7 @@
 eval $("ssh-agent")
 
 # path to identifyFile
-ssh-add ~/.ssh
+ssh-add ~/.ssh/school
 
 # username and IP address
 ssh ubuntu@107.23.92.244

@@ -1,25 +1,31 @@
 #!/usr/bin/env bash
-# Install and configure HAProxy on lb-01 server
-# Configure HAProxy to send traffic to web-01 and web-02
-# Distribute requests using a roundrobin algorithm
-# Make sure HAProxy can be managed via an init script
+# install load balancer
 
-# Update package repository
-sudo apt-get update
 
-# Install HAProxy
-export DEBIAN_FRONTEND=noninteractive
-sudo apt-get install -y haproxy
+echo -e "Updating and doing some minor checks...\n"
 
-# Create directory if it doesn't exist
-sudo mkdir -p /etc/haproxy
+function install() {
+	command -v "$1" &> /dev/null
 
-# Configure HAProxy
-sudo mv /etc/haproxy/haproxy.cfg{,.original}
-sudo touch /etc/haproxy/haproxy.cfg
+	#shellcheck disable=SC2181
+	if [ $? -ne 0 ]; then
+		echo -e "	Installing: $1\n"
+		sudo apt-get update -y -qq && \
+			sudo apt-get install -y "$1" -qq
+		echo -e "\n"
+	else
+		echo -e "	${1} is already installed.\n"
+	fi
+}
 
-# Define HAProxy configuration
-haproxy_config="
+install haproxy #install haproxy
+
+echo -e "\nSetting up some minor stuff.\n"
+
+# backup default server config file
+sudo cp /etc/haproxy/haproxy.cfg haproxy_default.backup
+
+server_config="
 global
 	log /dev/log    local0
 	log /dev/log    local1 notice
@@ -49,12 +55,16 @@ backend prudigy_backend
 	server 494470-web-01 100.25.156.254:80 check
 	server 494470-web-02 54.85.20.151:80 check
 "
+#shellcheck disable=SC2154
+echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg
 
-# Write HAProxy configuration to file
-echo "$haproxy_config" | sudo tee /etc/haproxy/haproxy.cfg
+# enable haproxy to be started by init script
+echo "ENABLED=1" | sudo dd status=none of=/etc/default/haproxy
 
-# Enable HAProxy management via init script
-sudo sed -i 's/ENABLED=0/ENABLED=1/' /etc/default/haproxy
+echo "configured - Roundrobin On web-01 & web-02"
 
-# Restart HAProxy service
-sudo systemctl restart haproxy
+if [ "$(pgrep -c haproxy)" -le 0 ]; then
+	sudo service haproxy start
+else
+	sudo service haproxy restart
+fi

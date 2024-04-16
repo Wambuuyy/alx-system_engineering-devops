@@ -5,7 +5,7 @@ pkill apache2
 
 # Create nginx user and group if they don't exist
 if ! id -u nginx &>/dev/null; then
-	    useradd -r -s /sbin/nologin nginx
+	useradd -r -s /sbin/nologin nginx
 fi
 
 # Change ownership of nginx configuration files to nginx user

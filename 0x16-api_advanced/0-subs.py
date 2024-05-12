@@ -1,25 +1,25 @@
-#!/usr/bin/python3
-"""
-created at 5:47 pm on 7th may 2024
-@author: Prudence Wambui
-"""
-from json import loads
 from requests import get
 
 
 def number_of_subscribers(subreddit):
-    """recursive function that queries the Reddit API and returns
-    a list containing the titles of all hot articles for a given
-    subreddit.  if number of results are found for the given subreddit,
-    the function should return None"""
+    """
+    Queries the Reddit API and returns the number
+    of subscribers for a given subreddit.
+    Args:
+        subreddit (str): The name of the subreddit.
+    Returns:
+        int: The number of subscribers of the subreddit.
+        Returns 0 if the subreddit is invalid or not found.
+    """
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {'User-Agent': 'Google Chrome Version 124.0.6367.63 '
-    }
-    response = get(url, headers=headers)
-    reddits = response.json()
+    headers = {'User-Agent': 'My User Agent 1.0'}
 
     try:
-        subscribers = reddits.get('data').get('subscribers')
+        response = get(url, headers=headers)
+        response.raise_for_status()
+        reddits = response.json()
+        subscribers = reddits.get('data', {}).get('subscribers', 0)
         return int(subscribers)
-    except Exception:
+    except Exception as e:
+        print("Error:", e)
         return 0

@@ -13,10 +13,13 @@ def number_of_subscribers(subreddit):
     subreddit.  if number of results are found for the given subreddit,
     the function should return None"""
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    headers = {'User-Agent': 'Linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)'
+    headers = {'User-Agent': 'Google Chrome Version 124.0.6367.63 '
     }
-    response = get(url, headers=headers allow_redirect=False)
-    if response.status_code == 404:
+    response = get(url, headers=headers)
+    reddits = response.json()
+
+    try:
+        subscribers = reddits.get('data').get('subscribers')
+        return int(subscribers)
+    except Exception:
         return 0
-    results = response.json().get("data")
-    return results.get("subscribers")

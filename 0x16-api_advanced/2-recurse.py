@@ -14,9 +14,8 @@ def recurse(subreddit, hot_list=[]):
     """
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     headers = {
-        'User-Agent':
-        'Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.3) \
-        Gecko/20100401 Firefox/3.6.3 (FM Scene 4.6.1)'
+        'User-Agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 \
+                        (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36'
     }
     response = get(url, headers=headers, allow_redirects=False)
     reddits = response.json()
@@ -26,6 +25,6 @@ def recurse(subreddit, hot_list=[]):
         for title in children:
             hot_list.append(title.get('data').get('title'))
         return hot_list
-    except:
+    except Exception:
         print(None)
         return 0

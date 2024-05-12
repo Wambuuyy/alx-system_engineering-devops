@@ -12,17 +12,11 @@ def number_of_subscribers(subreddit):
     a list containing the titles of all hot articles for a given
     subreddit.  if number of results are found for the given subreddit,
     the function should return None"""
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {
-        'User-Agent':
-        'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 \
-        (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36'
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {'User-Agent': 'Linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)'
     }
-    response = get(url, headers=headers)
-    reddits = response.json()
-
-    try:
-        subscribers = reddits.get('data').get('subscribers')
-        return int(subscribers)
-    except Exception:
+    response = get(url, headers=headers allow_redirect=False)
+    if response.status_code == 404:
         return 0
+    results = response.json().get("data")
+    return results.get("subscribers")

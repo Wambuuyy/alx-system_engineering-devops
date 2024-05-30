@@ -52,8 +52,8 @@ frontend prudigy_frontend
 
 backend prudigy_backend
 	balance roundrobin
-	server 494470-web-01 100.24.240.170:80 check
-	server 494470-web-02 3.85.136.235:80 check
+	server 494470-web-01 34.232.78.227:80 check
+	server 494470-web-02 100.25.37.97:80 check
 "
 #shellcheck disable=SC2154
 echo "$server_config" | sudo dd status=none of=/etc/haproxy/haproxy.cfg

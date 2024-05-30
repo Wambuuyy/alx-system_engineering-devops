@@ -47,6 +47,6 @@ frontend prudigy_frontend_https
 
 backend prudigy_backend
         balance roundrobin
-        server 494470-web-01 100.24.24o.170:80 check
-        server 494470-web-02 3.85.136.235:80 check
+        server 494470-web-01 34.232.78.227:80 check
+        server 494470-web-02 100.25.37.97:80 check
 
